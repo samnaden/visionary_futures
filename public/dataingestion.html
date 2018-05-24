@@ -1,0 +1,17 @@
+<div class="container" ng-show="false">
+Add a Cookie object
+	<input type="text" class="form-control input-lg text-center" placeholder="Enter the flavor of cookie" ng-model="cookieFormData.flavor">
+	<input type="number" class="form-control input-lg text-center" placeholder="Enter how tasty the cookie is from 0 to 10" ng-model="cookieFormData.tastiness">
+	<button type="submit" class="btn btn-primary btn-lg" ng-click="createCookie()">Add Cookie</button>
+</div>
+
+<div class="container">
+	<button ng-show="false" type="submit" class="btn btn-primary btn-lg" ng-click="wipeCookieCollection()">wipe cookie collection from mongo</button>
+	<button ng-show="false" type="submit" class="btn btn-primary btn-lg" ng-click="loadCookieCollection()">load cookieCollection.json into mongo</button>
+	<button ng-show="false" type="submit" class="btn btn-primary btn-lg" ng-click="wipeSodaCollection()">wipe soda collection from mongo</button>
+	<button ng-show="false" type="submit" class="btn btn-primary btn-lg" ng-click="loadSodaCollection()">load sodaCollection.json into mongo</button>
+	<button type="submit" class="btn btn-primary btn-lg" ng-click="wipeDatePriceWeatherLocCollection()">wipe datepriceweatherloc collection from mongo</button>
+	<br/>
+	<br/>
+	<button type="submit" class="btn btn-primary btn-lg" ng-click="loadDatePriceWeatherLocCollection()">load datepriceweatherloc collection into mongo</button>
+</div>

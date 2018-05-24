@@ -1,0 +1,17 @@
+{
+	"records":
+	[
+		{
+			"flavor": "chocolate chip",
+			"tastiness": 5
+		},
+		{
+			"flavor": "oreo",
+			"tastiness": 6
+		},
+		{
+			"flavor": "snickerdoodle",
+			"tastiness": 7
+		}
+	]
+}

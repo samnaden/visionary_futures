@@ -1,0 +1,68 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="visionaryfuture">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Visionary Futures</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		html 					{ overflow-y:scroll; }
+		
+		/*Some Examples of Styling*/
+/*		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+		#todo-form 	 			{ margin-bottom:50px; }*/
+
+
+		/*Styling for scatter plot*/
+		.axis line, .axis path {
+    		shape-rendering: crispEdges;
+    		stroke: black;
+    		fill: none;
+		}
+
+		circle {
+    		fill: steelblue;
+		}
+
+	</style>
+
+	<!-- external dependencies -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="js/dependencies/angular-route.js"></script>
+
+	<!-- load up our controllers -->
+	<script src="js/controllers/todocontroller.js"></script>
+	<script src="js/controllers/dataingestioncontroller.js"></script>
+	<script src="js/controllers/dataanalyzecontroller.js"></script>
+	<!-- load our services -->
+	<script src="js/services/todoservice.js"></script>
+	<script src="js/services/dataingestionservice.js"></script>
+	<script src="js/services/dataanalyzeservice.js"></script>
+	<!-- load our main application -->
+	<script src="js/core.js"></script>
+
+</head>
+<body>
+	<div>
+		<a ng-show = "false" ng-href="#/todo/">todo page</a>
+		<br/>
+		<a ng-href="#/dataingestion/">Data Ingestion</a>
+		<br/>
+		<a ng-href="#/dataanalyze/">Data Analysis</a>
+		<br/>
+		<br/>
+	</div>
+	<!-- view gets injected into below div based on configuration of routes in core.js -->
+	<div ng-view></div>
+</body>
+</html>
